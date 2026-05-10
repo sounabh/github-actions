@@ -1,10 +1,24 @@
 name: Hello world
 on: workflow_dispatch
 jobs:  
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Hello step
-      run: | 
-       echo "Welcome sounabh"
-       echo "Welcome sounabh line 2"
+    - name: Build step
+      run: echo "Welcome sounabh"
+  test:
+     runs-on: ubuntu-latest
+     steps:
+      - name : Test step
+        run : echo "Test the code"
+  deploy:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Deploy step
+        run : echo "Deploy the code"
+
+        
+
+        
+
+        
