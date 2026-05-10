@@ -1,19 +1,26 @@
 name: Hello world
-on: push:
-     branches:
+
+on:
+  push:
+    branches:
       - main
-    pull_request:
-      branches:
-       - main
-jobs:  
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Build step
-      run: echo "Welcome sounabh"
- 
-        
+      - name: Build step
+        run: echo "Welcome sounabh"
 
-        
+  deploy:
+    runs-on: ubuntu-latest  
+    needs : build 
 
-        
+    steps: 
+      - name: deploy step
+        run: echo "Welcome deploy" 
