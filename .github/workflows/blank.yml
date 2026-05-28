@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/pr
 
   pull_request:
     branches:
@@ -15,7 +16,7 @@ jobs:
 
     steps:
       - name: Build step
-        run: echo "Welcome sounabh"
+        run: echo "Welcome ${{vars.MY_NAME}}"
 
   deploy:
     runs-on: ubuntu-latest  
@@ -23,4 +24,4 @@ jobs:
 
     steps: 
       - name: deploy step
-        run: echo "Welcome deploy" 
+        run: echo "Welcome deploy step check again" 
