@@ -1,6 +1,10 @@
 name: Github action demo
 
-on: push
+on: 
+  push:
+    branches:
+         - main
+         - feature/pr
 
 jobs:
   action-demo:
